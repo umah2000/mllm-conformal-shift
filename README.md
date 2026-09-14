@@ -35,6 +35,11 @@ in seconds to minutes) or by first regenerating the underlying model outputs
 │   │                                      #   (Azad et al., paper ref [6])
 │   └── fix_ai2d_labels.py                # One-off fix for a ground-truth-label
 │                                          #   bug in the first AI2D run (see below)
+│   ├── colab_lacaps_baseline.py
+│   └── colab_concurrent_baselines_comparison.ipynb  # Best-effort re-impl. of
+│                                                      #   PromptShift-CRC [8] and
+│                                                      #   Domain-Shift-Aware CP [9]
+│                                                      #   -> Figure 8, Sec. 5.7
 ├── analysis/                      # CPU-only: turn score CSVs into paper results
 │   ├── 01_synthetic_validation.py        # -> Figure 1  (Sec. 4)
 │   ├── 02_ablation_hyperparameters.py    # -> Figure 2  (Sec. 4.1)
@@ -49,9 +54,7 @@ in seconds to minutes) or by first regenerating the underlying model outputs
 │                                  # fresh under outputs/figures/ at the repo
 │                                  # root (kept separate so re-runs never
 │                                  # silently overwrite the checked-in copies).
-└── paper/
-    └── build_paper_docx.js        # Rebuilds the Word manuscript from these
-                                    # results (Node.js + the `docx` package)
+
 ```
 
 Running any script under `analysis/` creates an `outputs/` directory (at the repo
