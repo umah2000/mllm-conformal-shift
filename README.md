@@ -137,19 +137,8 @@ Once the CSVs above exist in one directory, run the `analysis/` scripts in
 order as shown in "Quick start." Each script prints its console output (which
 should match the paper's tables) and saves its figure(s) to `outputs/figures/`.
 
-### 3. Paper (optional)
 
-`paper/build_paper_docx.js` regenerates the Word-format manuscript draft,
-embedding the figures produced above. Requires Node.js and the `docx` npm
-package (`npm install docx`).
 
-```bash
-cd paper
-npm install docx
-node build_paper_docx.js
-```
-
----
 
 ## Notes on honesty and reproducibility
 
@@ -170,14 +159,9 @@ node build_paper_docx.js
   truth in another) that is worth leaving visible for anyone extending this
   pipeline to a new multiple-choice dataset.
 
----
 
-## Citation
 
-If you use this code, please cite the paper (full citation to be added once
-the manuscript is finalized / assigned a DOI). See `paper/build_paper_docx.js`
-for the full reference list (with DOIs) of prior work this project builds on
-and compares against.
+
 
 ## License
 
